@@ -2,8 +2,14 @@
   "name": "knockoutjs-experiments",
   "dependencies": {
     "jquery": "2.*",
+    "requirejs": "*",
+    "domReady": "*",
+    "text": "*",
     "bootstrap": "3.*",
     "knockout": "^3.4.0",
-    "knockout-mapping": "^2.4.1"
+    "knockout-mapping": "^2.4.1",
+    "crossroads": "*",
+    "js-signals": "*",
+    "sammy": "*"
   }
 }
