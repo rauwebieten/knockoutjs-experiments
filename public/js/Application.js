@@ -1,6 +1,6 @@
 requirejs.config({
-    shim : {
-        "bootstrap" : { "deps" :['jquery'] }
+    shim: {
+        "bootstrap": {"deps": ['jquery']}
     },
     paths: {
         "jquery": "/bower_components/jquery/dist/jquery.min",
@@ -12,20 +12,14 @@ requirejs.config({
     }
 });
 
-require(['knockout', 'ApplicationViewModel', 'bootstrap', 'domReady'], function (ko, appViewModel, bootstrap, domReady) {
+require(['knockout', 'ApplicationViewModel', 'bootstrap', 'domReady'], function (ko, ApplicationViewModel, bootstrap, domReady) {
 
-    ko.components.register('like-widget', {
-        viewModel: function(params) {
-            this.test = 'OWJE'
-        },
-        template:
-            'MY TPL <strong data-bind="text: test"></strong>'
-    });
-    ko.components.register('like-or-dislike', {
-        viewModel: { require: 'TestModel' },
-        template: { require: 'text!../templates/test.html' }
+    ko.components.register('user-page', {
+        viewModel: {require: 'UserPageModel'},
+        template: {require: 'text!../templates/users.html'}
     });
 
-    ko.applyBindings(new appViewModel());
-    domReady(function() {});
+    ko.applyBindings(new ApplicationViewModel());
+    domReady(function () {
+    });
 });

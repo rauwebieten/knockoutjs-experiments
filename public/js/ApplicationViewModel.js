@@ -1,9 +1,7 @@
 // Main viewmodel class
-define(['knockout'], function(ko) {
+define(['knockout'], function (ko) {
     return function appViewModel() {
         this.firstName = ko.observable('Peter');
-        this.firstNameCaps = ko.pureComputed(function() {
-            return this.firstName().toUpperCase();
-        }, this);
+        this.pages = ko.observableArray(['home','users']);
     };
 });
