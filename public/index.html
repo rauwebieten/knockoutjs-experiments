@@ -9,7 +9,16 @@
 <body>
 <div class="container">
     <h1 data-bind="text: appName"></h1>
-    <user-page></user-page>
+
+    <ul class="nav nav-tabs" data-bind="foreach: navigation" style="margin-bottom: 30px;">
+        <li data-bind="css:{active: $parent.selectedNavigation() == $data}">
+            <a href="#" data-bind="text: title, click: $parent.setNavigation"></a>
+        </li>
+    </ul>
+
+    <div data-bind="if: selectedNavigation().id() == 'users'">
+        <user-page></user-page>
+    </div>
 </div>
 </body>
 </html>
