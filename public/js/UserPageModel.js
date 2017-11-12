@@ -22,6 +22,7 @@ define(['knockout','UserModel'], function(ko, UserModel) {
 
         self.setSelectedUser = function(user) {
             self.selectedUser(user);
+            
         };
 
         self.init();
