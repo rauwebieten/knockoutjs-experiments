@@ -1,5 +1,6 @@
-x
-<edit-user-form params="user: selectedUser"></edit-user-form>
+<!-- ko if: selectedUser -->
+    <edit-user-form params="user: selectedUser"></edit-user-form>
+<!-- /ko -->
 
 <table class="table table-condensed table-striped">
     <thead>
@@ -11,7 +12,7 @@ x
     </tr>
     </thead>
     <tbody data-bind="foreach: users">
-    <tr>
+    <tr data-bind="css: {'bg-info': $parent.setSelectedUser == $data}">
         <td>
             <a href="#" data-bind="click: $parent.setSelectedUser">edit</a>
         </td>

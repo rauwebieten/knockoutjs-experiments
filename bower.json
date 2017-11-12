@@ -10,6 +10,7 @@
     "knockout-mapping": "^2.4.1",
     "crossroads": "*",
     "js-signals": "*",
-    "sammy": "*"
+    "sammy": "*",
+    "anijs": "*"
   }
 }

@@ -1,15 +1,11 @@
-edit-user-form: <span class="label label-info" data-bind="text: test"></span>
-
-<form data-bind="if: user" action="" method="" class="form form-inline">
+<form action="" method="" class="form form-inline">
     <div class="form-group">
-        <input type="text" class="form-control" placeholder="Firstname" data-bind="value: user().fname"/>
+        <input type="text" class="form-control" placeholder="Firstname" data-bind="value: fname"/>
     </div>
     <div class="form-group">
-        <input type="text" class="form-control" placeholder="Lastname" data-bind="value: user().lname"/>
+        <input type="text" class="form-control" placeholder="Lastname" data-bind="value: lname"/>
     </div>
-    <!--
     <div class="form-group">
-        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="submit" class="btn btn-primary" data-bind="click: save">Save</button>
     </div>
-    -->
 </form>

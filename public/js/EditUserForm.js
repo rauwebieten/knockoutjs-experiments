@@ -1,10 +1,16 @@
 // Main viewmodel class
-define(['knockout'], function(ko, UserModel) {
+define(['knockout'], function (ko, UserModel) {
     return function EditUserForm(data) {
         var self = this;
 
         self.user = data.user;
 
-        self.test = ko.observable('test');
+        self.fname = ko.observable(self.user().fname());
+        self.lname = ko.observable(self.user().lname());
+
+        self.save = function () {
+            self.user().fname(self.fname());
+            self.user().lname(self.lname());
+        }
     };
 });
