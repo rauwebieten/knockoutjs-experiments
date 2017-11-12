@@ -2,12 +2,13 @@
 
 require_once '../../vendor/autoload.php';
 
-$faker = \Faker\Factory::create();
+$faker = \Faker\Factory::create('nl_BE');
 
 $array = [];
-for($i = 0; $i < 10; $i++) {
+for($i = 0; $i < 3; $i++) {
     $array[] = [
-        'name' => $faker->name(),
+        'fname' => $faker->firstName(),
+        'lname' => $faker->lastName(),
         'address' => $faker->address(),
     ];
 }

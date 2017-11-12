@@ -1,14 +1,27 @@
+x
+<edit-user-form params="user: selectedUser"></edit-user-form>
+
 <table class="table table-condensed table-striped">
     <thead>
     <tr>
-        <th>Name</th>
+        <th></th>
+        <th>Firstname</th>
+        <th>Lastname</th>
         <th>Address</th>
     </tr>
     </thead>
     <tbody data-bind="foreach: users">
     <tr>
-        <td data-bind="text: name"></td>
+        <td>
+            <a href="#" data-bind="click: $parent.setSelectedUser">edit</a>
+        </td>
+        <td data-bind="text: fname"></td>
+        <td data-bind="text: lname"></td>
         <td data-bind="text: address"></td>
     </tr>
     </tbody>
 </table>
+
+<!--
+<pre data-bind="text: ko.toJSON($data, null, 2)"></pre>
+-->

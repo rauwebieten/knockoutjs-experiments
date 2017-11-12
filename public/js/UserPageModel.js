@@ -5,6 +5,7 @@ define(['knockout','UserModel'], function(ko, UserModel) {
 
         self.title = ko.observable('User management');
         self.users = ko.observableArray([]);
+        self.selectedUser = ko.observable();
 
         self.init = function() {
             self.loadUsers();
@@ -17,6 +18,10 @@ define(['knockout','UserModel'], function(ko, UserModel) {
                     self.users.push(user);
                 });
             });
+        };
+
+        self.setSelectedUser = function(user) {
+            self.selectedUser(user);
         };
 
         self.init();

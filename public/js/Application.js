@@ -18,6 +18,10 @@ require(['knockout', 'ApplicationViewModel', 'bootstrap', 'domReady'], function 
         viewModel: {require: 'UserPageModel'},
         template: {require: 'text!../templates/users.html'}
     });
+    ko.components.register('edit-user-form', {
+        viewModel: {require: 'EditUserForm'},
+        template: {require: 'text!/templates/edit-user-form.html'}
+    });
 
     ko.applyBindings(new ApplicationViewModel());
     domReady(function () {

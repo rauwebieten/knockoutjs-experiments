@@ -1,7 +1,7 @@
 // Main viewmodel class
 define(['knockout'], function (ko) {
     return function appViewModel() {
-        this.firstName = ko.observable('Peter');
+        this.appName = ko.observable('Knockout JS experiments');
         this.pages = ko.observableArray(['home','users']);
     };
 });
